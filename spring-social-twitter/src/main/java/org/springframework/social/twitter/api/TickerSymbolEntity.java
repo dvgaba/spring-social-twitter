@@ -32,6 +32,21 @@ public class TickerSymbolEntity implements Serializable {
 
 	private int[] indices;
 
+	public TickerSymbolEntity() {
+	}
+
+	public void setTickerSymbol(String tickerSymbol) {
+		this.tickerSymbol = tickerSymbol;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setIndices(int[] indices) {
+		this.indices = indices;
+	}
+
 	public TickerSymbolEntity(String tickerSymbol, String url, int[] indices) {
 		this.tickerSymbol = tickerSymbol;
 		this.url = url;

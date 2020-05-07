@@ -42,6 +42,9 @@ public class MediaEntity extends TwitterObject implements Serializable {
 
 	private int[] indices;
 
+	public MediaEntity() {
+	}
+
 	public MediaEntity(long id, String mediaHttp, String mediaHttps, String url, String display, String expanded, String type, int[] indices) {
 		this.id = id;
 		this.mediaHttp = mediaHttp;
@@ -53,6 +56,53 @@ public class MediaEntity extends TwitterObject implements Serializable {
 		this.indices = indices;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getMediaHttp() {
+		return mediaHttp;
+	}
+
+	public void setMediaHttp(String mediaHttp) {
+		this.mediaHttp = mediaHttp;
+	}
+
+	public String getMediaHttps() {
+		return mediaHttps;
+	}
+
+	public void setMediaHttps(String mediaHttps) {
+		this.mediaHttps = mediaHttps;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(String display) {
+		this.display = display;
+	}
+
+	public String getExpanded() {
+		return expanded;
+	}
+
+	public void setExpanded(String expanded) {
+		this.expanded = expanded;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setIndices(int[] indices) {
+		this.indices = indices;
+	}
 
 	public long getId() {
 		return this.id;

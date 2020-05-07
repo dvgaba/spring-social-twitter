@@ -38,6 +38,33 @@ public class Entities extends TwitterObject implements Serializable {
 
 	private List<TickerSymbolEntity> tickerSymbols = new LinkedList<TickerSymbolEntity>();
 
+	public Entities() {
+	}
+
+	public void setUrls(List<UrlEntity> urls) {
+		this.urls = urls;
+	}
+
+	public List<HashTagEntity> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<HashTagEntity> tags) {
+		this.tags = tags;
+	}
+
+	public void setMentions(List<MentionEntity> mentions) {
+		this.mentions = mentions;
+	}
+
+	public void setMedia(List<MediaEntity> media) {
+		this.media = media;
+	}
+
+	public void setTickerSymbols(List<TickerSymbolEntity> tickerSymbols) {
+		this.tickerSymbols = tickerSymbols;
+	}
+
 	public Entities(List<UrlEntity> urls, List<HashTagEntity> tags, List<MentionEntity> mentions, List<MediaEntity> media) {
 		this.urls = urls;
 		this.tags = tags;

@@ -46,6 +46,20 @@ public class MentionEntity extends TwitterObject implements Serializable {
 		this.indices = indices;
 	}
 
+	public MentionEntity() {
+	}
+
+	public void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setIndices(int[] indices) {
+		this.indices = indices;
+	}
 
 	public long getId() {
 		return this.id;

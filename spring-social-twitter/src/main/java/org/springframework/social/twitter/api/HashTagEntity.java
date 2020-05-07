@@ -33,6 +33,17 @@ public class HashTagEntity extends TwitterObject implements Serializable {
 		return this.text;
 	}
 
+	public HashTagEntity() {
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public void setIndices(int[] indices) {
+		this.indices = indices;
+	}
+
 	public HashTagEntity(String text, int[] indices) {
 		this.text = text;
 		this.indices = indices;

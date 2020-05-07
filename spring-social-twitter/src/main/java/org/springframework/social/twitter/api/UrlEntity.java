@@ -34,6 +34,9 @@ public class UrlEntity extends TwitterObject implements Serializable {
 
 	private int[] indices;
 
+	public UrlEntity() {
+	}
+
 	public UrlEntity(String display, String expanded, String url, int[] indices) {
 		this.display = display;
 		this.expanded = expanded;
@@ -41,6 +44,21 @@ public class UrlEntity extends TwitterObject implements Serializable {
 		this.indices = indices;
 	}
 
+	public void setDisplay(String display) {
+		this.display = display;
+	}
+
+	public void setExpanded(String expanded) {
+		this.expanded = expanded;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setIndices(int[] indices) {
+		this.indices = indices;
+	}
 
 	public String getDisplayUrl() {
 		return this.display;

@@ -26,14 +26,14 @@ import java.util.Date;
 public class TwitterProfile extends TwitterObject implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private final long id;
-	private final String screenName;
-	private final String name;
-	private final String url;
-	private final String profileImageUrl;
-	private final String description;
-	private final String location;
-	private final Date createdDate;
+	private long id;
+	private String screenName;
+	private String name;
+	private String url;
+	private String profileImageUrl;
+	private String description;
+	private String location;
+	private Date createdDate;
 	private String language;
 	private int statusesCount;
 	private int friendsCount;
@@ -75,7 +75,154 @@ public class TwitterProfile extends TwitterObject implements Serializable {
 		this.location = location;
 		this.createdDate = createdDate;		
 	}
-	
+
+	public TwitterProfile() {
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setProfileImageUrl(String profileImageUrl) {
+		this.profileImageUrl = profileImageUrl;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+	public void setStatusesCount(int statusesCount) {
+		this.statusesCount = statusesCount;
+	}
+
+	public void setFriendsCount(int friendsCount) {
+		this.friendsCount = friendsCount;
+	}
+
+	public void setFollowersCount(int followersCount) {
+		this.followersCount = followersCount;
+	}
+
+	public void setFavoritesCount(int favoritesCount) {
+		this.favoritesCount = favoritesCount;
+	}
+
+	public void setListedCount(int listedCount) {
+		this.listedCount = listedCount;
+	}
+
+	public void setFollowing(boolean following) {
+		this.following = following;
+	}
+
+	public void setFollowRequestSent(boolean followRequestSent) {
+		this.followRequestSent = followRequestSent;
+	}
+
+	public void setProtected(boolean aProtected) {
+		isProtected = aProtected;
+	}
+
+	public void setNotificationsEnabled(boolean notificationsEnabled) {
+		this.notificationsEnabled = notificationsEnabled;
+	}
+
+	public void setVerified(boolean verified) {
+		this.verified = verified;
+	}
+
+	public void setGeoEnabled(boolean geoEnabled) {
+		this.geoEnabled = geoEnabled;
+	}
+
+	public void setContributorsEnabled(boolean contributorsEnabled) {
+		this.contributorsEnabled = contributorsEnabled;
+	}
+
+	public void setTranslator(boolean translator) {
+		this.translator = translator;
+	}
+
+	public void setTimeZone(String timeZone) {
+		this.timeZone = timeZone;
+	}
+
+	public void setUtcOffset(int utcOffset) {
+		this.utcOffset = utcOffset;
+	}
+
+	public void setSidebarBorderColor(String sidebarBorderColor) {
+		this.sidebarBorderColor = sidebarBorderColor;
+	}
+
+	public void setSidebarFillColor(String sidebarFillColor) {
+		this.sidebarFillColor = sidebarFillColor;
+	}
+
+	public void setBackgroundColor(String backgroundColor) {
+		this.backgroundColor = backgroundColor;
+	}
+
+	public boolean isUseBackgroundImage() {
+		return useBackgroundImage;
+	}
+
+	public void setUseBackgroundImage(boolean useBackgroundImage) {
+		this.useBackgroundImage = useBackgroundImage;
+	}
+
+	public void setBackgroundImageUrl(String backgroundImageUrl) {
+		this.backgroundImageUrl = backgroundImageUrl;
+	}
+
+	public void setBackgroundImageTiled(boolean backgroundImageTiled) {
+		this.backgroundImageTiled = backgroundImageTiled;
+	}
+
+	public void setTextColor(String textColor) {
+		this.textColor = textColor;
+	}
+
+	public void setLinkColor(String linkColor) {
+		this.linkColor = linkColor;
+	}
+
+	public boolean isShowAllInlineMedia() {
+		return showAllInlineMedia;
+	}
+
+	public void setShowAllInlineMedia(boolean showAllInlineMedia) {
+		this.showAllInlineMedia = showAllInlineMedia;
+	}
+
+	public void setProfileBannerUrl(String profileBannerUrl) {
+		this.profileBannerUrl = profileBannerUrl;
+	}
+
 	/**
 	 * The user's Twitter ID
 	 * 
