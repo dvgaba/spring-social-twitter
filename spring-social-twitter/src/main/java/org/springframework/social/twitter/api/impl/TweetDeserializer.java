@@ -57,13 +57,16 @@ class TweetDeserializer extends JsonDeserializer<Tweet> {
 
 
 	public Tweet deserialize(JsonNode node) throws IOException, JsonProcessingException {
+		
+
 		final long id = node.path("id").asLong();
 		final String idStr = node.path("id_str").asText();
-		final String text = node.path("text").asText();
+		String text = node.path("text").asText();
 		final String fullText = node.path("full_text").asText();
 		if (id <= 0 || text == null || text.isEmpty()) {
-			return null;
+			text = fullText;
 		}
+
 		JsonNode fromUserNode = node.get("user");
 		String dateFormat = TIMELINE_DATE_FORMAT;
 		String fromScreenName = fromUserNode.get("screen_name").asText();
