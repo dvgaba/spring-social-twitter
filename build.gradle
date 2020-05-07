@@ -64,6 +64,7 @@ configure(allprojects - docProjects) {
     repositories {
         maven { url "https://repo.spring.io/libs-snapshot" }
         maven { url "https://repo.spring.io/libs-milestone" }
+        maven { url "https://repo.spring.io/milestone" }
         mavenLocal()
     }
 
@@ -97,6 +98,7 @@ configure(subprojects - docProjects) { subproject ->
 
         repositories {
             maven { url "https://repo.spring.io/libs-snapshot" }
+            maven { url "https://repo.spring.io/milestone" }
         }
 
         dependencyManagement {
@@ -209,7 +211,6 @@ project("spring-social-twitter-autoconfigure") {
     description = "Spring Social Twitter Auto-Configuration"
     dependencies {
       compile project(":spring-social-twitter")
-      compile("org.springframework.social:spring-social-autoconfigure:$springSocialVersion")
       compile("org.springframework.boot:spring-boot-autoconfigure:$springBootVersion")
       testCompile("org.springframework.boot:spring-boot-test:$springBootVersion")
       testCompile("org.assertj:assertj-core:1.0.0")
