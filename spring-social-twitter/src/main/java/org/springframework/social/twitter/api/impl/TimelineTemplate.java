@@ -56,6 +56,7 @@ class TimelineTemplate extends AbstractTwitterOperations implements TimelineOper
 		requireUserAuthorization();
 		MultiValueMap<String, String> parameters = PagingUtils.buildPagingParametersWithCount(pageSize, sinceId, maxId);
 		parameters.set("include_entities", "true");
+		parameters.set("tweet_mode", "extended");
 		return restTemplate.getForObject(buildUri("statuses/home_timeline.json", parameters), TweetList.class);
 	}
 	

@@ -27,6 +27,7 @@ public class Tweet extends TwitterObject implements Serializable {
 
 	private final String id;
 	private final String text;
+	private String fullText;
 	private final Date createdAt;
 	private String fromUser;
 	private String profileImageUrl;
