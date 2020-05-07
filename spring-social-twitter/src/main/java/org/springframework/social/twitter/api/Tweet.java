@@ -25,10 +25,10 @@ import java.util.Date;
 public class Tweet extends TwitterObject implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private final long id;
-	private final String idStr;
-	private final String text;
-	private final Date createdAt;
+	private long id;
+	private String idStr;
+	private String text;
+	private Date createdAt;
 	private String fullText;
 	private String fromUser;
 	private String profileImageUrl;
@@ -111,7 +111,23 @@ public class Tweet extends TwitterObject implements Serializable {
 	public String getText() {
 		return text;
 	}
-	
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setIdStr(String idStr) {
+		this.idStr = idStr;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
 	/**
 	 * Returns the unmodified text of the tweet.
 	 * If this tweet is a retweet, it returns the text of the original tweet.
