@@ -67,6 +67,13 @@ public class Tweet extends TwitterObject implements Serializable {
 		this(id, String.valueOf(id), text, createdAt, fromUser, profileImageUrl, toUserId, fromUserId, languageCode, source);
 	}
 
+	public Tweet(){
+		id = -1;
+		text = "";
+		idStr = "-1";
+		createdAt = new Date();
+	}
+
 	/**
 	 * Constructs a Tweet
 	 * 
